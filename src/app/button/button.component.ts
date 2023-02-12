@@ -5,18 +5,13 @@ import { Component, Input, OnInit } from '@angular/core';
   templateUrl: './button.component.html',
   styleUrls: ['./button.component.scss']
 })
-export class ButtonComponent implements OnInit {
-  @Input() backgroundColor: string = '#999fa0';
-  @Input() textColor: string = 'black';
+export class ButtonComponent {
+  @Input() backgroundColor: string = 'tomato';
+  @Input() textColor: string = 'white';
   @Input() label: string = 'Change your button label!';
 
 
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
-  test(bColor: string) {
+ public displayColor(bColor: string): void {
       alert(`Hello your background color is "${bColor}"`);
   }
 
